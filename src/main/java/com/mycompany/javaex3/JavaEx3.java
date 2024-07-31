@@ -14,7 +14,7 @@ public class JavaEx3 {
         java.util.Scanner scanner = new java.util.Scanner(System.in);
         int choice = 0;
         while (choice != 4) {
-            System.out.println("1. Compare strings");
+            System.out.println("\n1. Compare strings");
             System.out.println("2. Compare string segments");
             System.out.println("3. Generate random sentence");
             System.out.println("4. Exit");
@@ -38,6 +38,7 @@ public class JavaEx3 {
                     int start = scanner.nextInt();
                     System.out.print("Enter the end index: ");
                     int end = scanner.nextInt();
+                    scanner.nextLine();
                     CompareStringSeg.start(str1, str2, start, end);
                     break;
                 case 3:
@@ -49,7 +50,7 @@ public class JavaEx3 {
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-            scanner.close();
         }
+        scanner.close();
     }
 }
